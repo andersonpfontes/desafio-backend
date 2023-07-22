@@ -24,3 +24,4 @@ interface SellerInterface
         string $socialName
     ): array;
 }
+?>

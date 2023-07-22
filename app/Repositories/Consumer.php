@@ -36,3 +36,4 @@ class Consumer implements ConsumerInterface
         ];
     }
 }
+?>

@@ -44,3 +44,4 @@ class Seller implements SellerInterface
         ];
     }
 }
+?>

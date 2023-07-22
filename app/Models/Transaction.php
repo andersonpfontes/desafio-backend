@@ -2,19 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
+    use HasFactory;
     /**
      * @inheritDoc
      */
     protected $guarded = [];
-
-    /**
-     * @inheritDoc
-     */
-    protected $dateFormat = 'Y-m-d\TH:i:s.u\Z';
 
     /**
      * @inheritDoc
@@ -34,10 +31,10 @@ class Transaction extends Model
     protected $casts = [
         'payee_id' => 'integer',
         'payer_id' => 'integer',
-        'value' => 'integer',
+        'value' => 'decimal',
     ];
 
-    /**
+  /**
      * Get created_at.
      *
      * @return string

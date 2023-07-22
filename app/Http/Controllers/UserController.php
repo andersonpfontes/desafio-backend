@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\User as UserRequest;
 use App\Repositories\UserInterface;
-use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
@@ -29,11 +28,12 @@ class UserController extends Controller
     /**
      * List users.
      *
-     * @param Request $request
+     * @param UserRequest $request
      * @return array
      */
-    public function index(Request $request): array
+    public function index(UserRequest $request): array
     {
+        dd($request);
         return $this->user->list($request->get('q'));
     }
 
@@ -68,3 +68,4 @@ class UserController extends Controller
         return $this->user->create($request->all());
     }
 }
+?>

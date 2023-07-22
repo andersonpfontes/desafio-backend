@@ -31,3 +31,4 @@ class Transaction implements TransactionInterface
         return $transaction->toArray();
     }
 }
+?>

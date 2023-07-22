@@ -14,9 +14,6 @@ class Account extends Model
      */
     protected $guarded = [];
 
-  public static function factory(int $int)
-  {
-  }
 
   /**
      * Get consumer.

@@ -1,14 +1,25 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
-use App\Models\Transaction;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Transaction::class, function (Faker $faker) {
-    return [
-        'payee_id' => $faker->randomNumber(),
-        'payer_id' => $faker->randomNumber(),
-        'value' => $faker->randomFloat(),
-    ];
-});
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Transaction>
+ */
+class TransactionFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'payee_id' => fake()->randomNumber(3,true),
+            'payer_id' => fake()->randomNumber(3,true),
+            'value' => fake()->randomFloat(2),
+        ];
+    }
+}

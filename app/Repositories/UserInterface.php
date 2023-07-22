@@ -28,3 +28,4 @@ interface UserInterface
      */
     public function show(int $id): array;
 }
+?>

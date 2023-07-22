@@ -1,16 +1,23 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
-use App\Models\Account;
-use App\Models\Seller;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Seller::class, function (Faker $faker) {
-    return [
-        'account_id' => factory(Account::class)->create()->id,
-        'cnpj' => $faker->cnpj(false),
-        'fantasy_name' => $faker->company,
-        'social_name' => $faker->company,
-    ];
-});
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Seller>
+ */
+class SellerFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            //
+        ];
+    }
+}

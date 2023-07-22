@@ -16,3 +16,4 @@ interface ConsumerInterface
      */
     public function create(int $userId, string $username): array;
 }
+?>
